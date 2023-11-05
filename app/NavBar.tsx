@@ -38,3 +38,7 @@ const NavBar = () => {
 }
 
 export default NavBar
+
+// prisma migrate dev --name init --create-only
+
+// prisma migrate deploy
