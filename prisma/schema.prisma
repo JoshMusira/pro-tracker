@@ -9,8 +9,8 @@ datasource db {
 }
 
 model Issue {
-  id          Int      @id @default(autoincrement())
-  title       String   @db.VarChar(255)
+  id          String   @id @default(uuid())
+  title       String   @unique @db.VarChar(255)
   description String   @db.Text
   status      Status   @default(OPEN)
   createdAt   DateTime @default(now())

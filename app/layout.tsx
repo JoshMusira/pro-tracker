@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Pro Task App',
   description: 'A project that trackers your progress',
 }
+const
 
 export default function RootLayout({
   children,
