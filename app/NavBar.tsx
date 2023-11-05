@@ -1,8 +1,13 @@
+"use client"
 import Link from "next/link"
 import Image from 'next/image';
 import logo from '../public/assets/fixes.png'
+import { usePathname } from "next/navigation";
+import classNames from "classnames";
 
 const NavBar = () => {
+    const currentPath = usePathname();
+
     const links = [
         { label: 'Dashboard', href: '/' },
         { label: 'Issues', href: '/issues' }
@@ -19,7 +24,12 @@ const NavBar = () => {
             </Link>
             <ul className="flex space-x-6">
                 {
-                    links.map((link) => <Link key={link.href} className="text-zinc-500 hover:text-zinc-800 transition-colors" href={link.href}>{link.label}</Link>)
+                    links.map((link) => <Link key={link.href} className={classNames({
+                        'text-zinc-900': link.href === currentPath,
+                        'text-zinc-500 ': link.href !== currentPath,
+                        'hover:text-zinc-800 transition-colors font-bold': true
+
+                    })} href={link.href}>{link.label}</Link>)
                 }
 
             </ul>
