@@ -15,7 +15,7 @@ const LatestIssues = async () => {
             {issues ? issues.map((issue) => {
                 return (
                     <div key={issue.id} className='flex space-y-2 flex-col pl-5 border-b border-gray-200 '>
-                        <p className='text-xl text-gray-600'><Link href={'/'}>{issue.title}</Link></p>
+                        <p className='text-xl text-gray-600'><Link href={`/issues/${issue.id}`}>{issue.title}</Link></p>
                         <p className='text-green-600 pb-2'>{issue.status}</p>
 
                     </div>

@@ -13,7 +13,7 @@ const NavBar = () => {
         { label: 'Issues', href: '/issues' }
     ]
     return (
-        <nav className="flex space-x-6 border-b mb-5 px-5 h-14 items-center">
+        <nav className="flex space-x-6 border-b mb-5 px-5 h-14 items-center bg-gray-100">
             <Link href={'/'}>
                 <Image
                     src={logo}
@@ -39,6 +39,3 @@ const NavBar = () => {
 
 export default NavBar
 
-// prisma migrate dev --name init --create-only
-
-// prisma migrate deploy
