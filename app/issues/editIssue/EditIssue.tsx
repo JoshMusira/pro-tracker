@@ -1,6 +1,6 @@
 "use client";
 import { Select } from "@radix-ui/themes";
-const EditIssue = () => {
+const EditIssue = ({ issue }) => {
     return (
         <div className="w-[25%] flex  flex-col space-y-4">
             <Select.Root >

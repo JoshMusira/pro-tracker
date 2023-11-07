@@ -1,7 +1,7 @@
 import { Card } from "@radix-ui/themes";
 import ReactMarkdown from 'react-markdown';
 
-const IssueDetails = () => {
+const IssueDetails = ({issue}) => {
     return (
         <div className="flex flex-col space-y-3 w-[70%]">
             <p className='text-xl text-gray-600'>Test</p>
