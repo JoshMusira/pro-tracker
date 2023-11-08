@@ -19,10 +19,10 @@ const SingleIssueDetails = async ({ params }: Props) => {
     if (!fetchIssue) notFound();
 
     return (
-        <div className="flex justify-between gap-4 w-[80%] mx-auto">
+        <div className=" w-[80%] mx-auto  shadow-sm shadow-slate-100 p-10">
             {
                 fetchIssue ? (
-                    <div>
+                    <div className="flex justify-between gap-4">
                         <IssueDetails issue={fetchIssue} />
                         <EditIssue issue={fetchIssue} />
                     </div>
