@@ -14,7 +14,7 @@ const SingleIssueDetails = async ({ params }: Props) => {
     const fetchIssue = await prisma.issue.findUnique({
         where: { id: params.id }
     })
-    console.log(fetchIssue)
+    // console.log(fetchIssue)
 
     if (!fetchIssue) notFound();
 
