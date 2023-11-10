@@ -6,7 +6,7 @@ const page = () => {
                 <div className="w-full max-w-md mx-auto md:max-w-sm  md:w-96 sm:px-4 shadow-sm shadow-gray-600 p-8">
                     <div className="flex flex-col">
                         <div>
-                            <h2 className="text-4xl text-black">Reset password</h2>
+                            <h2 className="text-4xl text-black">Reset your password</h2>
                         </div>
                     </div>
                     <form>
