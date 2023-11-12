@@ -8,6 +8,14 @@ datasource db {
   relationMode = "prisma"
 }
 
+model user {
+  id       String @id @default(uuid())
+  name     String
+  username String @unique
+  email    String
+  password String
+}
+
 model Issue {
   id          String   @id @default(uuid())
   title       String   @unique @db.VarChar(255)
