@@ -1,7 +1,7 @@
 import { createUserSchema } from "@/app/validationSchema";
 import prisma from "@/prisma/client";
 import { NextRequest, NextResponse } from "next/server";
-
+import bcryptjs from 'bcryptjs'
 
 export async function POST(request: NextRequest) {
     const body = await request.json();
@@ -20,13 +20,15 @@ export async function POST(request: NextRequest) {
             return NextResponse.json({ message: "User with this username already exists." }, { status: 400 });
         }
 
+        const hashedPassword = await bcryptjs.hash(validation.data.password, 10);
+
 
         const newUser = await prisma.user.create({
             data: {
                 name: validation.data.name,
                 username: validation.data.username,
                 email: validation.data.email,
-                password: validation.data.password
+                password: hashedPassword
             }
         });
 
